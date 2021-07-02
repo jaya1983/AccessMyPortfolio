@@ -1,11 +1,10 @@
- *{
+*{
 margin: 0;
-padding: 0;
+padding: 0; 
 box-sizing: border-box;
 }
-body {
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+
+/* header Styling */
 header {
 padding: 25px 0px;
 background-color: slategrey;
@@ -24,6 +23,7 @@ background-color: lightskyblue;
 text-decoration: none;
 color: black;
 }
+/* header navigation */
 header nav {
 float: right;
 margin: 10px 100px 0px 0px;
@@ -33,146 +33,178 @@ margin: 0 10px;
 font-weight: bold;
 font-size: 22px;
 display: inline;
-} 
+}
+/* header navigation hover over styling */ 
 li:hover{
-  background-color: yellow;
-  border-radius: 15px;
-  padding: 5px 5px 5px 5px;
+background-color: yellow;
+border-radius: 15px;
+padding: 5px 5px 5px 5px;
 }
 header nav ul li a{
 color: black;
 }
-
-.section1-row {
+body {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.hero {
+  background-image: url("../Images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  position: relative;
+}
+.hero h3 {
+  color: white;
+  background: grey;
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 100px;
+  margin-right: 50px;
+}
+/* Each section row, column1  Styling */
+.section1-row, .section2-row, .section3-row{
 display: flex;
 flex-direction: row;  
 flex: 30%;
-width: 85%;   
-padding: 10px 10px 50px 60px;
+/*width: 78%;*/ 
 margin: 20px 65px 0px 60px;
 font-size: 20px;   
 }
-.section2-row{
- display: flex;
-flex-direction: row;  
-flex: 30%;
-width: 90%;   
+
+
+/* Each section row, column2 vertical bar styling */
+.section1-col2, .section2-col2, .section3-col2{
+display: flex;
+flex-direction: column;
+margin: 0px 50px 0px 10px;
+border-left: 5px solid black;
+border-width: 5px;
+}
+#about-me{
+padding: 10px 10px 50px 60px; 
+width: 78%;
+}
+#about-me h2{
+  margin-right: 30px;
+}
+#work{
 padding: 10px 30px 50px 70px;
-margin: 20px 65px 0px 60px;
-font-size: 20px;
+width: 80%;
 }
-.section3-row{
-display: flex;
-flex-direction: row;  
-flex: 30%;
-width: 90%;   
-padding: 10px 10px 50px 40px;
-margin: 20px 65px 0px 60px;
-font-size: 20px;
+#work h2{
+    margin-right: 30px;
 }
-/*
-.about-me{
-  margin-right: 30%;
-}
-.section1-row .h2{
-  margin: 10px 20px 0px 50px;
-  padding: 10px 20px 0px 50px;
-}*/
-.section1-col2{
-  display: flex;
-  flex-direction: column;
- /* margin: 0px 50px 20px 35px;*/
- margin: 0px 50px 0px 10px;
-  border-left: 5px solid black;
-  border-width: 5px;
-}
-.section2-col2{
-display: flex;
-flex-direction: column;
-/*margin: 0px 50px 20px 45px;*/
-margin: 0px 50px 0px 10px;
-border-left: 5px solid black;
-border-width: 5px;
-}
-.section3-col2{
- display: flex;
-flex-direction: column;
-/*margin: 0px 0px 10px 15px;*/
-margin: 0px 50px 0px 10px;
-border-left: 5px solid black;
-border-width: 5px;
+#contact-me h2{
+  margin-right: 30px;
+  margin-left: 40px;
 }
 .section3-col3 {
-display:inline;
-margin: 30px 40px 0px 0px;
-padding: 0px 50px 0px 0px;
-font-size: 20px;
-font-weight: bold;
-color: black;
-}
-
+  display:inline;
+  flex-direction: row;                                     
+  margin: 10px 35px 20px 0px;
+  padding: 0px 30px 0px 0px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  } 
 .flex-container {
 display: flex;
 flex-wrap: wrap;
+flex: 100%;
 }
-.flex-item {
-    /* width: 45%; */
+
+/* Image Styling Start ,
+--  Bigger Image - Food Delivery App */
+
+.food-delivery{
+width: 100%;
 border-radius: 0px;
-    border: 4px solid skyblue;
-    background-color: #393b4f;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-right: 15px;
-    /* background-image: url(https://via.placeholder.com/1000/393b4f/fb3e55?text=Placeholder); */
-    background-size: cover;
-    background-position: center;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column-reverse;
-    position: relative;
-      
-  }
-   .flex-item1{
-    /* makes each one 45%, putting 10% between each element on the page 
-    width: 150%;
-    /* rounded corners */
-    display:flex; 
-    flex-direction: column;
-    position: relative; 
-    border-radius: 0px;
-    border: 4px solid skyblue;
-    background-color: #393b4f;
-    font-size: 22px;
-    font-weight: bold;
-    /* puts space between each one vertically */
-    margin-bottom: 20px;
-    margin-right: 20px;
-    /* tells background to fit box no matter what */
-    background-size: cover;
-    /* crops it at the center */
-    background-position: center;
-    /* padding top and bottom 20px, 0 for left/right */
-    padding: 0px;
-    /* sets minimum height value so there's room */
-    min-height: 400px;
-  }        
-  .flex-item1 .text{
-    font-weight: normal;
-  }
+border: 4px solid skyblue; 
+font-size: 22px;
+font-weight: bold;
+margin-bottom: 15px;
+background-image: url("../Images/FoodDelivery.jpeg");
+background-size: cover;
+background-position: center;
+padding: 20px 0;
+min-height: 450px;
+display: flex;
+flex-direction: column;
+position: relative;
+}
+
+/* Small Images - Calculator, LED Wall, Pastel-Puzzle and Run Buddy Image Styling */
+
+.calculator, .led-wall, .pastel-puzzle, .run-buddy{  
+display: flex;
+flex-direction: column;
+width: 90%;
+min-height: 180px;
+border-radius: 0px;
+border: 4px solid skyblue;   
+font-size: 22px;
+font-weight: bold;
+margin-bottom: 15px;
+margin-right: 20px; 
+position: relative;  
+} 
+#calculator {  
+background-image: url("../Images/calculator.jpg");
+} 
+#led-wall {  
+background-image: url("../Images/LedWall.jpg");
+}
+#pastel-puzzle{  
+background-image: url("../Images/PastelPuzzle.png");
+}
+#run-buddy{  
+background-image: url("../Images/runbuddy.jpeg");
+}
+
+.project-links{
+  width: 50%;
+}
+.project-links-fd{
+  width: 95%;
+}
+/* Each Span Item Styling */
 .span-item{
-    width: 150px;
-    padding: 20px 0px 5px 0px;
-    background-color: skyblue;
-    position: absolute;
-    bottom: 5%;
-    left: 0;
+width: 150px;
+padding: 20px 0px 5px 0px;
+background-color: skyblue;
+position: absolute;
+bottom: 5%;
+left: 0;
+}
+.span-item .bold-text{
+  font-weight: bold;
+}
+.span-item .normal-text{
+  font-weight: normal;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media only screen and (max-width: 980px) {
+  .food-delivery{
+    width: 100%;
     }
-    .span-item .bold-text{
-      font-weight: bold;
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER 
+@media only screen and (max-width: 768px) {
+  .food-delivery{
+    width: 85%;
     }
-    .span-item .normal-text{
-      font-weight: normal;
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER 
+@media only screen and (max-width: 768px) {
+  .food-delivery{
+    width: 45%;
     }
+}
 
 
