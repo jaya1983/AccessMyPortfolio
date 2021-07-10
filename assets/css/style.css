@@ -291,6 +291,16 @@ body {
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media only screen and (max-width: 575px) {
+  header nav {
+    float: right;
+    margin: 10px 70px 0px 0px;
+  }
+  header nav ul li {
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 10px;
+    display: inline;
+  }
   #about-me h2 {
     font-size: 18px;
     font-weight: bold;
